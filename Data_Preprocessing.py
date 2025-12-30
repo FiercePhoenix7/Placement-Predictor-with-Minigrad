@@ -1,7 +1,7 @@
 import pandas as pd
 
 df = pd.read_csv('Raw_Data.csv')
-df.drop('StudentID', axis=1)
+df = df.drop('StudentID', axis=1)
 
 df["ExtracurricularActivities"] = df["ExtracurricularActivities"].astype('category')
 df["ExtracurricularActivities"] = df["ExtracurricularActivities"].cat.codes
