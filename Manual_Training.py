@@ -52,7 +52,6 @@ def loss(parameters, X, Y):
     avg_loss = total_loss / len(X)
     return avg_loss
 
-
 def train(epochs=1000, alpha=0.01):
     for epoch in range(epochs):
         total_loss = loss(parameters, X_train, y_train)
@@ -75,3 +74,5 @@ bundle = {
 
 with open('manually_trained_model.bin', 'wb') as file:
     pickle.dump(bundle, file)
+
+print("Model trained and saved successfully!")
